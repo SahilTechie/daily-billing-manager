@@ -1,0 +1,97 @@
+# System Design Document
+
+## System Overview
+The system is a single-tenant billing platform designed for one shop owner.
+It uses a client-server architecture with REST APIs.
+
+---
+
+## Entity Relationship Overview
+
+Owner
+ └── Customers
+      └── Bills
+           └── Payments
+
+---
+
+## Core Data Models
+
+### User
+- email
+- passwordHash
+- shopName
+
+### Customer
+- name
+- mobile
+- address
+- currentBalance
+
+### Bill
+- billNumber
+- customerId
+- date
+- birdType
+- numberOfBirds
+- weight
+- rate
+- totalAmount
+- advancePaid
+- balanceAmount
+
+### Payment
+- customerId
+- amount
+- date
+
+---
+
+## Authentication Flow
+
+1. Owner logs in
+2. Server validates credentials
+3. JWT issued
+4. JWT attached to all protected requests
+
+---
+
+## Bill Creation Flow
+
+1. Owner selects customer
+2. Enters bill details
+3. Frontend calculates totals
+4. Backend validates and stores bill
+5. Customer balance updated
+
+---
+
+## Payment Flow
+
+1. Owner adds payment
+2. Backend records payment
+3. Customer balance recalculated
+4. Old bills remain unchanged
+
+---
+
+## Pending Balance Logic
+
+- Balance derived from:
+  Total billed − Total payments
+- Sorted queries for pending list
+
+---
+
+## Scalability Considerations (Future)
+- Add PWA support
+- Offline-first sync
+- Multi-shop support (future, not MVP)
+
+---
+
+## System Design Principles
+
+- Simplicity over optimization
+- Readability over abstraction
+- Owner-first thinking

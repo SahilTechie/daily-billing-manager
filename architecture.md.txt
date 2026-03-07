@@ -1,0 +1,86 @@
+# Architecture Overview – Mobile-First Billing Web App (MERN)
+
+## Overview
+This application is a mobile-first billing web app built using the MERN stack.
+It is designed for a single chicken shop owner to digitally replace a paper bill book.
+
+The architecture is intentionally simple, scalable, and easy to maintain.
+
+---
+
+## High-Level Architecture
+
+Client (React – Mobile Web)
+        |
+        | REST API (HTTPS + JWT)
+        |
+Server (Node.js + Express)
+        |
+        |
+Database (MongoDB)
+
+---
+
+## Frontend Architecture (React)
+
+- Single Page Application (SPA)
+- Mobile-first layout (max-width 480px)
+- Component-based structure
+- API communication via Axios
+- Authentication handled using JWT stored securely
+
+### Key Frontend Modules
+- Auth (Login)
+- Customer Management
+- Bill Creation
+- Customer Ledger
+- Pending Balance View
+
+---
+
+## Backend Architecture (Node + Express)
+
+- RESTful API design
+- Stateless authentication using JWT
+- Express controllers for business logic
+- Mongoose models for data persistence
+
+### Backend Layers
+- Routes (API endpoints)
+- Controllers (business logic)
+- Models (MongoDB schemas)
+- Middleware (auth, validation)
+
+---
+
+## Database Architecture (MongoDB)
+
+- Document-based storage
+- One owner → many customers → many bills
+- Optimized for read-heavy operations (ledger, pending list)
+
+---
+
+## Security Architecture
+
+- JWT-based authentication
+- Protected API routes
+- Password hashing using bcrypt
+- Environment variables for secrets
+
+---
+
+## Deployment Architecture (Suggested)
+
+- Frontend: Vercel / Netlify
+- Backend: Render / Railway
+- Database: MongoDB Atlas
+
+---
+
+## Design Principles
+
+- Simple
+- Owner-first
+- Mobile-first
+- No unnecessary abstraction

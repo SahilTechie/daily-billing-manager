@@ -1,0 +1,85 @@
+# Product Requirements Document (PRD)
+
+## Product Name
+Mobile Billing Web App for Chicken Shop Owner
+
+---
+
+## Problem Statement
+Small shop owners rely on paper bill books, which:
+- Are hard to track
+- Cause disputes
+- Make pending amounts unclear
+- Are easily lost or damaged
+
+---
+
+## Product Goal
+Digitally replace the paper bill book without changing the owner’s workflow.
+
+---
+
+## Target User
+- Single chicken shop owner
+- Uses manual billing
+- Uses mobile phone daily
+- Needs simple, fast, reliable records
+
+---
+
+## User Goals
+- Record customer details once
+- Create bills quickly
+- Track pending balances
+- Access old bills anytime
+
+---
+
+## Functional Requirements
+
+### Authentication
+- Single owner login
+
+### Customer Management
+- Add customer
+- View customer list
+- Select customer while billing
+
+### Billing
+- Auto bill number
+- Editable date
+- Bird type selection
+- Auto calculations
+- Save and view bill
+
+### Ledger
+- Customer-wise bill history
+- Total billed
+- Total paid
+- Pending balance
+
+### Payments
+- Add payment
+- Update balance
+- Preserve historical bills
+
+---
+
+## UX Requirements
+- Mobile-first
+- App-like feel
+- Minimal text
+- Large buttons
+- No clutter
+
+---
+
+## Constraints
+- No extra features
+- No multi-user support
+- No inventory
+
+---
+
+## MVP Definition
+If the owner can fully stop using the paper bill book, the MVP is successful.

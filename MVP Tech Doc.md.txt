@@ -1,0 +1,93 @@
+# MVP Technical Documentation
+
+## Purpose
+This document defines the technical scope of the Minimum Viable Product (MVP).
+The MVP focuses strictly on replacing a paper bill book for a single shop owner.
+
+---
+
+## Tech Stack
+
+### Frontend
+- React.js
+- Tailwind CSS (or plain CSS)
+- Axios
+- Mobile-first responsive design
+
+### Backend
+- Node.js
+- Express.js
+- JWT authentication
+- bcrypt for password hashing
+
+### Database
+- MongoDB
+- Mongoose ODM
+
+---
+
+## Core Features (MVP Only)
+
+1. Owner Authentication
+2. Customer Management
+3. Bill Creation
+4. Auto Calculations
+5. Customer Ledger
+6. Pending Balance List
+7. Payment Update
+8. Bill PDF & Sharing
+
+---
+
+## Key Calculations
+
+- Amount = Weight × Rate
+- Total = Sum of bill items
+- Balance = Total − Advance − Payments
+
+---
+
+## API Overview (High Level)
+
+### Auth
+- POST /api/auth/login
+
+### Customers
+- POST /api/customers
+- GET /api/customers
+- GET /api/customers/:id
+
+### Bills
+- POST /api/bills
+- GET /api/bills
+- GET /api/bills/customer/:customerId
+
+### Payments
+- POST /api/payments
+
+---
+
+## Mobile UX Rules
+
+- Single-column layout
+- No desktop navigation
+- Big form inputs
+- Sticky bottom buttons where needed
+
+---
+
+## Non-Goals (Explicitly Out of Scope)
+
+- Inventory
+- Analytics
+- Reports
+- Multi-user roles
+- Admin dashboards
+
+---
+
+## Success Criteria
+
+- Owner can create a bill in under 30 seconds
+- Owner can instantly check pending balances
+- App usable comfortably on a mobile browser
