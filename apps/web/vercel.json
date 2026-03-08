@@ -1,6 +1,9 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "env": {
     "VITE_API_BASE_URL": "https://bill-memo-api-production.up.railway.app/api"
   }
