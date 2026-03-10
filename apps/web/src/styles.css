@@ -905,3 +905,209 @@ select:focus {
   color: #666;
   font-weight: 500;
 }
+
+/* ====== RECEIPT STYLES ====== */
+.receipt-wrapper {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.receipt {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #1a1a1a;
+  padding-bottom: 14px;
+}
+
+.receipt-shop {
+  margin: 0 0 2px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+}
+
+.receipt-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #888;
+}
+
+.receipt-meta {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+.receipt-meta .receipt-label {
+  display: block;
+}
+
+.receipt-field {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
+.receipt-label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin-bottom: 2px;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.receipt-table th {
+  text-align: left;
+  font-size: 11px;
+  color: #888;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 8px 6px;
+  border-bottom: 1px solid #ddd;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.receipt-table td {
+  padding: 10px 6px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.receipt-row strong {
+  color: #1a1a1a;
+}
+
+.receipt-divider {
+  border-top: 1px dashed #ccc;
+  margin: 8px 0;
+}
+
+.receipt-total-row {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.receipt-total-row span,
+.receipt-total-row strong {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.receipt-advance {
+  color: #c85a4f !important;
+  font-weight: 600;
+}
+
+.receipt-balance {
+  display: flex;
+  justify-content: space-between;
+  background: #fdf6ec;
+  border: 1px solid #f0dbb8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #b8860b;
+  font-weight: 700;
+}
+
+.receipt-balance strong {
+  color: #b8860b;
+}
+
+.receipt-dashes {
+  text-align: center;
+  color: #bbb;
+  margin: 14px 0 4px;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.receipt-thanks {
+  text-align: center;
+  color: #c85a4f;
+  font-weight: 700;
+  margin: 0;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Receipt action buttons */
+.receipt-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #fff;
+  color: #1a1a1a;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-pdf:hover {
+  background: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(37,211,102,0.3);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe57;
+  box-shadow: 0 3px 12px rgba(37,211,102,0.4);
+}

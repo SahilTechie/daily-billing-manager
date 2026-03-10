@@ -49,14 +49,14 @@ const NewBillPage = () => {
 
   const submit = async (e) => {
     e.preventDefault();
-    await api.post("/bills", {
+    const { data } = await api.post("/bills", {
       ...form,
       numberOfBirds: Number(form.numberOfBirds || 0),
       weight: Number(form.weight || 0),
       rate: Number(form.rate || 0),
       advancePaid: Number(form.advancePaid || 0),
     });
-    navigate("/bills");
+    navigate(`/bills/${data.data._id}`);
   };
 
   return (
